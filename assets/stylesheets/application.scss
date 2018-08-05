@@ -1,0 +1,61 @@
+.light {
+  background-image: none;
+  background-color: lightgrey;
+}
+
+.note {
+  float: right;
+  span {
+    margin: 0 5px;
+  }
+}
+
+.progress-bar {
+  min-width: 50px;
+}
+
+.table {
+  background-color: azure;
+}
+
+.table-bordered > thead > tr > th {
+  padding: 15px;
+  background-color: dimgrey;
+  color: white;
+}
+
+.table-bordered > tbody > tr > td {
+  padding: 10px 15px;
+  span {
+    margin: 0 5px;
+    background-color: darkgray;
+  }
+
+  &.ok {
+    border-left: green 20px solid;
+    padding-left: 5px;
+  }
+
+  &.warn {
+    border-left: orange 20px solid;
+    padding-left: 5px;
+  }
+  &.ko {
+    border-left: red 20px solid;
+    padding-left: 5px;
+  }
+
+  .progress-bar-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    .progress {
+      flex-grow: 1;
+    }
+    .label{
+      font-weight: bold;
+      color: dimgrey;
+      padding: 0 5px;
+    }
+  }
+}
