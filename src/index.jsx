@@ -32,8 +32,8 @@ ReactDOM.render(
 		<Router history={history}>
 			<App>
 				<Switch>
-					<Route path="/server" component={ServerListContainer}/>
-					<Route path="/disk/:serverId" component={DiskListContainer}/>
+					<Route exact path="/server" component={ServerListContainer}/>
+					<Route path="/server/:serverId" component={DiskListContainer}/>
 					<Redirect to='/server' />
 				</Switch>
 			</App>

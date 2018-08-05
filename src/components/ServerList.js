@@ -3,6 +3,7 @@ import React from 'react';
 import { Badge, Table } from 'react-bootstrap';
 import classNames from 'classnames';
 import { getStatusClass, bytesToSize } from './../utils/utils';
+import { Link } from 'react-router-dom';
 
 class ServerList extends React.Component {
 
@@ -26,7 +27,7 @@ class ServerList extends React.Component {
 				{this.props.servers && this.props.servers.map((server, index) =>
 					<tr key={index}>
 						<td className={classNames(getStatusClass(server.status))}>
-							<a href={'/disk/'+ server.id }>{server.name}</a>
+							<Link to={'/server/'+ server.id }>{server.name}</Link>
 						</td>
 						<td>{server.zone}</td>
 						<td>{server.server_type}</td>
